@@ -76,6 +76,7 @@ var fight = function(enemyName) {
             window.alert(playerName + ' still has ' + playerHealth + ' health left.')
         }
 
+        /*
         // if player chooses to fight, then fight
         if (promptFight === "fight" || promptFight === "FIGHT") {
             // Subtract the value of `playerAttack` from the value of `eneyHealth` and use that result to update the value in the `enemyHealth` variable
@@ -105,10 +106,12 @@ var fight = function(enemyName) {
             //Check for player's health
             if (playerHealth <= 0) {
                 window.alert(playerName + " has died!");
+                //leave while() loop if player is dead 
+                break;
             } else {
                 window.alert(playerName + " still has " + playerHealth + " health left.");
             }
-        }
+        */
     }
 }
 
@@ -116,6 +119,10 @@ for (var i = 0; i < enemyNames.length; i++) {
     var pickedEnemyName = enemyNames[i];
     enemyHealth = 50;
     fight(pickedEnemyName);
+
+    if (playerHealth > 0) {
+        window.alert("Welcome to Robot Gladiators!");
+    }
 }
 
 /*
